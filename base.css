@@ -1,0 +1,17 @@
+span {
+  padding-left: 10px;
+}
+button {
+  margin: 10px;
+  display: inline-block;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  background-color: #3366ff;
+}
+button img {
+  width: 15px;
+  height: 15px;
+  padding-right: 5px;
+  vertical-align: text-top;
+}
