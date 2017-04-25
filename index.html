@@ -13,33 +13,7 @@
   </head>
   <body>
     <div id="fb-root"></div>
-    <script type="text/javascript">
-      // Facebook SDK
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '373957932968890',
-          xfbml      : true,
-          version    : 'v2.8'
-        });
-        FB.AppEvents.logPageView();
-      };
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-       // Facebook Comments API
-       (function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=373957932968890";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script src="fb.js"></script>
     <img src="images/profile.png" alt="프로필 사진">
     <p>
       <span>이름 : Captain Pangyo</span><br>
@@ -51,7 +25,6 @@
         <img src="images/like.png">좋아요
       </button> -->
       <div class="fb-like" data-href="https://joshua1988.github.io/DevCampWAP-SWA/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-      <div class="fb-follow" data-href="https://www.facebook.com/CaptainPangyo" data-layout="standard" data-size="small" data-show-faces="true"></div>
     </section>
     <div class="fb-comments" data-href="https://joshua1988.github.io/DevCampWAP-SWA/" data-numposts="5"></div>
     <!-- <script src="main.js"></script> -->
