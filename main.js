@@ -3,9 +3,11 @@ document.getElementById('share').onclick = function() {
     method: 'feed',
     link: 'https://joshua1988.github.io/DevCampWAP-SWA/',
     caption: 'My Facebook profile application',
-  }, function(response){});
+  }, function(response){
+    if (response && !response.error_message) {
+      console.log('Posting completed.');
+    } else {
+      console.log('Error while posting.');
+    }
+  });
 };
-
-// function clickButton() {
-//   alert("프로필을 좋아합니다..!");
-// }
