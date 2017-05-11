@@ -1,4 +1,4 @@
-document.getElementsByClassName('feature-item-link').onclick = function() {
+document.getElementById('share').onclick = function() {
   FB.ui({
     method: 'feed',
     link: 'https://developers.facebook.com/docs/',
