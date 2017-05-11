@@ -2,31 +2,278 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1.0001, maximum-scale=1.0001"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Your Website Title" />
-    <meta property="og:description"   content="Your description" />
-    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
-    <title>Facebook Profile Page</title>
-    <link rel="stylesheet" href="base.css">
+    <!-- Facebook Open Graph Markup (how it appears on FB) -->
+    <meta property="og:url" content="https://joshua1988.github.io/DevCampWAP-SWA/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="My Facebook Profile Page" />
+    <meta property="og:description" content="Designed this with bare HTMl, CSS, JS" />
+    <meta property="og:image" content="http://cdn.www.fastcampus.co.kr/wp-content/uploads/2017/04/dev_camp_wap.png" />
+    <title>자기소개 페이지</title>
+    <style>
+      /* no margin on browser (user-agent) */
+      body {
+        margin: 0;
+        text-align: center;
+        font-family: -apple-system, sans-serif;
+      }
+      button {
+        margin: 10px;
+        display: inline-block;
+        height: 30px;
+        border-radius: 5px;
+        color: white;
+        background-color: #3366ff;
+      }
+      button img {
+        width: 15px;
+        height: 15px;
+        padding-right: 5px;
+        vertical-align: text-top;
+      }
+      .timeline-cover {
+      }
+      .cover-photo {
+        height: 180px;
+      }
+      .profile-user-name {
+        padding: 12px;
+        color: #90949c;
+        line-height: 16px;
+      }
+      .profile-photo-down {
+        display: inline-block;
+        position: relative;
+        width: 120px;
+        height: 60px;
+      }
+      .profile-inner {
+        vertical-align: bottom;
+      }
+      .profile-frame {
+        border-radius: 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .125);
+        display: block;
+        background-size: auto;
+        background-color: #fff;
+        height: 116px;
+        margin-top: -50%;
+        padding: 2px;
+      }
+      .profile-img {
+        width: 116px;
+        height: 116px;
+      }
+      h3 {
+        color: #1d2129;
+        font: 26px Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        letter-spacing: -0.25px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+      }
+      .feature-list-inner {
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        display: flex;
+        border-top: 1px solid #f2f2f2;
+        width: inherit;
+        flex: 1;
+      }
+      .feature-item {
+        width: 93.5px;
+        height: inherit;
+        position: relative;
+        display: block;
+        flex: 1;
+        width: 0;
+      }
+      .feature-item-link {
+        border-radius: 0;
+        line-height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 8px;
+        background: #fff;
+        background-attachment: scroll;
+        box-sizing: border-box;
+        display: block;
+        width: 93.5px;
+        height: 60px;
+        direction: ltr;
+        !! sprite url : https://static.xx.fbcdn.net/rsrc.php/v3/yp/r/Hlm7GMn17e3.png
+      }
+      .feature-item-icon {
+        margin: 0;
+        top: -1px;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        line-height: 27px;
+        white-space: nowrap;
+      }
+      .post {
+        background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yp/r/Hlm7GMn17e3.png');
+        background-position: -21px -55px;
+        background-size: 104px 108px;
+      }
+      .update-info {
+        background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/yq0jcyPZDDS.png');
+        background-position: 0 -180px;
+        background-size: 51px 235px;
+      }
+      .activity-log {
+        background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/yq0jcyPZDDS.png');
+        background-position: -21px -159px;
+        background-size: 51px 235px;
+      }
+      .more {
+        background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/tB9YdRWNCP4.png');
+        background-position: -30px -174px;
+        background-size: 53px 589px;
+      }
+      .feature-item-name {
+        font-weight: normal;
+        line-height: 16px;
+        white-space: nowrap;
+        font-family: -apple-system, sans-serif;
+        font-size: 11px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .profile-description {
+        border-top: 1px solid #f2f2f2;
+        margin-bottom: 12px;
+      }
+      .profile-address {
+        margin: 12px 0 12px 0;
+        color: #4b4f56;
+        line-height: 18px;
+      }
+      .profile-address-line {
+        display: flex;
+        padding: 0 16px;
+        position: relative;
+        text-align: left;
+      }
+      .profile-address-icon {
+        align-items: flex-start;
+        display: flex;
+
+      }
+      .profile-address-i {
+        background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/SGEId_joT4J.png');
+        background-position: -34px -300px;
+        background-size: 53px 334px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+      .profile-address-text {
+        flex: 1;
+        width: 0;
+        padding-left: 8px;
+        max-width: 100%;
+        display: flex;
+      }
+      .profile-address-t {
+        font-size: 14px;
+        line-height: 20px;
+        color: #4b4f56;
+        text-align: left;
+      }
+      .timeline-body {
+        border-top: 1px solid #f2f2f2;
+      }
+    </style>
   </head>
   <body>
-    <div id="fb-root"></div>
     <script src="fb.js"></script>
-    <img src="images/profile.png" alt="프로필 사진">
+    <script src="main.js"></script>
+
+    <div class="timeline-cover">
+      <div class="cover-photo">
+        <img src="images/fb-cover.jpg" alt="" width="100%;" height="180px;">
+      </div>
+      <div class="profile-photo-down">
+        <div class="profile-inner">
+          <a href="">
+            <div class="profile-frame">
+              <img src="images/profile.jpg" alt="" width="116px;" height="116px;">
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="profile-user-name">
+        <h3>Gihyo Joshua Jang</h3>
+      </div>
+    </div>
+    <div class="feature-list">
+      <div class="feature-list-inner">
+        <div class="feature-item">
+          <a class="feature-item-link">
+            <i class="feature-item-icon post"></i>
+            <span class="feature-item-name">Post</span>
+          </a>
+        </div>
+        <div class="feature-item">
+          <a class="feature-item-link">
+            <i class="feature-item-icon update-info"></i>
+            <span class="feature-item-name">Update Info</span>
+          </a>
+        </div>
+        <div class="feature-item">
+          <a class="feature-item-link">
+            <i class="feature-item-icon activity-log"></i>
+            <span class="feature-item-name">Activity Log</span>
+          </a>
+        </div>
+        <div class="feature-item">
+          <a class="feature-item-link">
+            <i class="feature-item-icon more"></i>
+            <span class="feature-item-name">More</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="profile-description">
+      <div class="profile-address">
+        <div class="profile-address-line">
+          <div class="profile-address-icon">
+            <i class="profile-address-i"></i>
+          </div>
+          <div class="profile-address-text">
+            <span class="profile-address-t">Lives in Pangyo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-body">
+      <div class="timeline-share">
+        <!-- share thoughts -->
+      </div>
+      <div class="timeline-feed">
+        <!-- display comments -->
+      </div>
+    </div>
+
+    <!-- <img src="profile.png" alt="프로필 사진">
     <p>
-      <span>이름 : Captain Pangyo</span><br>
-      <span>관심 : Progressive Web App</span><br>
-      <span>언어 : Javscript, Python</span><br>
-    </p>
-    <section>
-      <!-- <button onclick="clickButton()">
-        <img src="images/like.png">좋아요
-      </button> -->
-      <div class="fb-like" data-href="https://joshua1988.github.io/DevCampWAP-SWA/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-    </section>
-    <div class="fb-comments" data-href="https://joshua1988.github.io/DevCampWAP-SWA/" data-numposts="5"></div>
-    <!-- <script src="main.js"></script> -->
+      <span>이름 : 장기효</span><br>
+      <span>직무 : SW 개발</span><br>
+      <span>주소 : 판교로 255</span><br>
+      <button onclick="clickButton()">
+        <img src="like.png">좋아요
+      </button>
+    </p> -->
   </body>
 </html>
