@@ -1,0 +1,40 @@
+.cover-photo {
+  height: 180px;
+}
+.profile-user-name {
+  padding: 12px;
+  color: #90949c;
+  line-height: 16px;
+}
+.profile-photo-down {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 60px;
+}
+.profile-inner {
+  vertical-align: bottom;
+}
+.profile-frame {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .125);
+  display: block;
+  background-size: auto;
+  background-color: #fff;
+  height: 116px;
+  margin-top: -50%;
+  padding: 2px;
+}
+.profile-img {
+  width: 116px;
+  height: 116px;
+}
+h3 {
+  color: #1d2129;
+  font: 26px Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.25px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
