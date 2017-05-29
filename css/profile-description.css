@@ -5,17 +5,10 @@
 .profile-address {
   margin: 12px 0 12px 0;
   color: #4b4f56;
-  line-height: 18px;
 }
 .profile-address-line {
   display: flex;
   padding: 0 16px;
-  position: relative;
-  text-align: left;
-}
-.profile-address-icon {
-  align-items: flex-start;
-  display: flex;
 }
 .profile-address-i {
   background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/SGEId_joT4J.png');
@@ -27,15 +20,12 @@
   height: 16px;
 }
 .profile-address-text {
-  flex: 1;
-  width: 0;
-  padding-left: 8px;
-  max-width: 100%;
   display: flex;
+  flex: 1;
+  padding-left: 8px;
 }
 .profile-address-t {
   font-size: 14px;
   line-height: 20px;
   color: #4b4f56;
-  text-align: left;
 }

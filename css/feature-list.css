@@ -1,47 +1,28 @@
 .feature-list-inner {
   position: relative;
-  z-index: 1;
-  align-items: center;
   display: flex;
+  align-items: center;
+  z-index: 1;
   border-top: 1px solid #f2f2f2;
-  width: inherit;
   flex: 1;
 }
 .feature-item {
-  width: 93.5px;
-  height: inherit;
-  position: relative;
-  display: block;
   flex: 1;
-  width: 0;
 }
 .feature-item-link {
-  border-radius: 0;
-  line-height: 27px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding: 8px;
-  background: #fff;
-  background-attachment: scroll;
-  box-sizing: border-box;
   display: block;
-  width: 93.5px;
-  height: 60px;
-  direction: ltr;
-  !! sprite url : https://static.xx.fbcdn.net/rsrc.php/v3/yp/r/Hlm7GMn17e3.png
+  line-height: 27px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 .feature-item-icon {
-  margin: 0;
-  top: -1px;
   position: relative;
-  width: 20px;
-  height: 20px;
   display: inline-block;
   vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  top: -1px;
   background-repeat: no-repeat;
-  line-height: 27px;
-  white-space: nowrap;
 }
 .post {
   background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yp/r/Hlm7GMn17e3.png');
@@ -64,12 +45,8 @@
   background-size: 53px 589px;
 }
 .feature-item-name {
-  font-weight: normal;
   line-height: 16px;
-  white-space: nowrap;
   font-family: -apple-system, sans-serif;
   font-size: 11px;
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
